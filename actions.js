@@ -2,19 +2,20 @@
 var fn = {
     init : function() {
         
-    navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+    //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
         
-    if(geoloc.lat != null && geoloc.lon !=null){
+    //if(geoloc.lat != null && geoloc.lon !=null){
         
         //Posición del mapa
-        var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
+        var latlng = new google.maps.LatLng(-34.397, 150.644);
+        //var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
         var myOptions = {
             zoom: 8,
             center: latlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     
         //Marcador
         var marker = new google.maps.Marker({
@@ -23,16 +24,18 @@ var fn = {
             title:"Mi posición"
         });
         
-    } else {
+    //} else {
     
-        $('#map_canvas').text('Error al asignar latitud y longitud');
+    //    $('#map_canvas').text('Error al asignar latitud y longitud');
     
-    }//end-if
+    //}//end-if
         
     }
 };
 
-$(geoloc.deviceready); //$(document).ready //$(fn.init);
+$(fn.init);
+
+//$(geoloc.deviceready); //$(document).ready //$(fn.init);
 
 var geoloc = {    
     lat: null,
