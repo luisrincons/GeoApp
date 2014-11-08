@@ -2,8 +2,8 @@
 var fn = {
     init : function() {
         
-    //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
-        
+    navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+    alert(geoloc.lat);
     //if(geoloc.lat != null && geoloc.lon !=null){
         
         //Posición del mapa
