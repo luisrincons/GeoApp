@@ -9,7 +9,7 @@ var fn = {
 
 var geoloc = {    
     device: function(){
-        document.addEventListener('deviceready', fn.init, false); 
+        document.addEventListener('device', fn.init, false); 
         //verif. y carga de las librerias.
     },
     onSucess: function(position) {
