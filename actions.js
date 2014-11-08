@@ -1,8 +1,8 @@
 //actions.js
 var fn = {
     init : function() {
-        
-    navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+    alert('Inicia...');   
+    navigator.geolocation.getCurrentPosition(geoloc.onSuccess geolo,c.onError); 
     
     }
 };
@@ -13,10 +13,11 @@ var geoloc = {
         //verif. y carga de las librerias.
     },
     onSucess: function(position) {
+        
         geoloc.lat = position.coords.latitude;
         geoloc.lon = position.coords.longitude;
         
-        if(geoloc.lat != undefined && geoloc.lon !=undefined){
+        if(geoloc.lat != undefined && geoloc.lon != undefined){
 
             //Posición del mapa
             var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
@@ -43,6 +44,7 @@ var geoloc = {
         
              
     },
+    
     onError: function(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
