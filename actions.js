@@ -2,7 +2,7 @@
 var fn = {
     init : function() {
     alert('Inicia...');   
-    navigator.geolocation.getCurrentPosition(geoloc.onSuccess geolo,c.onError); 
+    navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
     
     }
 };
@@ -52,6 +52,6 @@ var geoloc = {
 
 };
 
-$(fn.init);
+//$(fn.init);
 
-//$(geoloc.device); //$(document).ready //$(fn.init);
+$(geoloc.device); //$(document).ready //$(fn.init);
