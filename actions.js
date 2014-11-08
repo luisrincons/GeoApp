@@ -8,9 +8,7 @@ var fn = {
 };
 
 var geoloc = {    
-    lat: null,
-    lon: null, 
-    deviceready: function(){
+    device: function(){
         document.addEventListener('deviceready', fn.init, false); 
         //verif. y carga de las librerias.
     },
@@ -18,10 +16,9 @@ var geoloc = {
         geoloc.lat = position.coords.latitude;
         geoloc.lon = position.coords.longitude;
         
-        if(geoloc.lat != null && geoloc.lon !=null){
+        if(geoloc.lat != undefined && geoloc.lon !=undefined){
 
             //Posición del mapa
-            //var latlng = new google.maps.LatLng(-34.397, 150.644);
             var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
             var myOptions = {
                 zoom: 8,
@@ -55,4 +52,4 @@ var geoloc = {
 
 //$(fn.init);
 
-$(geoloc.deviceready); //$(document).ready //$(fn.init);
+$(geoloc.device); //$(document).ready //$(fn.init);
