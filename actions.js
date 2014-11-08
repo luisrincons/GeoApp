@@ -52,6 +52,6 @@ var geoloc = {
 
 };
 
-//$(fn.init);
+$(fn.init);
 
-$(geoloc.device); //$(document).ready //$(fn.init);
+//$(geoloc.device); //$(document).ready //$(fn.init);
