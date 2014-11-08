@@ -3,7 +3,7 @@ var fn = {
     init : function() {
     alert('Inicia...');   
     navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
-    
+    alert(geoloc.lat);
     }
 };
 
