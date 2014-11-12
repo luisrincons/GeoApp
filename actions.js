@@ -34,7 +34,7 @@ var fn = {
     }
 };
 
-var device: function(){
+var device = function() {
     document.addEventListener('deviceready', fn.init, false); 
 }
 
