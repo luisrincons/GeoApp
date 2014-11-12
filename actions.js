@@ -1,13 +1,13 @@
 //actions.js
 var onSuccess = function(position) {
 
-    geoloc.lat = position.coords.latitude;
-    geoloc.lon = position.coords.longitude;
+    //geoloc.lat = position.coords.latitude;
+    //geoloc.lon = position.coords.longitude;
     
 
         
     //Posición del mapa
-    var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
+    var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     var myOptions = {
         zoom: 8,
         center: latlng,
