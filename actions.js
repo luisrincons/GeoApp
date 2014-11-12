@@ -23,8 +23,8 @@ var geoloc = {
     
     onSucess: function(position) {
                 
-        geoloc.lat = position.coords.latitude;
-        geoloc.lon = position.coords.longitude;
+        var geoloc.lat = position.coords.latitude;
+        var geoloc.lon = position.coords.longitude;
         
 //        if(geoloc.lat != undefined && geoloc.lon != undefined){
 
