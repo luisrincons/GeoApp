@@ -9,8 +9,8 @@ function onError(error) {
 
 var fn = {
     init : function() {
-        $('#version').text('1.3');
-        navigator.geolocation.getCurrentPosition(onSuccess, onError); 
+        $('#version').text('1.4');
+        navigator.geolocation.getCurrentPosition(onSuccess, geoloc.onError); 
         alert("Done!");
     }
 };
