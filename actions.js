@@ -1,12 +1,11 @@
 //actions.js
 var onSuccess = function(position) {
-        var geoloc.lat = position.coords.latitude;
-        var geoloc.lon = position.coords.longitude;
+
         
 //        if(geoloc.lat != undefined && geoloc.lon != undefined){
 
             //Posición del mapa
-            var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
+            var latlng = new google.maps.LatLngposition.coords.latitude, position.coords.longitude);
             var myOptions = {
                 zoom: 8,
                 center: latlng,
@@ -51,8 +50,8 @@ var geoloc = {
     
     onSucess: function(position) {
                 
-        var geoloc.lat = position.coords.latitude;
-        var geoloc.lon = position.coords.longitude;
+//        var geoloc.lat = position.coords.latitude;
+//        var geoloc.lon = position.coords.longitude;
         
 //        if(geoloc.lat != undefined && geoloc.lon != undefined){
 
