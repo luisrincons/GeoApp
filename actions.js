@@ -9,8 +9,7 @@ var fn = {
     init : function() {
         
         navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
-        alert('Latitude: '      + geoloc.lat          + '\n' +
-          'Longitude: '         + geoloc.lon         + '\n');   
+        alert('Latitude: ' );   
 
     }
 };
