@@ -28,7 +28,7 @@ function onError(error) {
 
 var fn = {
     init : function() {
-        $('#version').text('1.9');
+        $('#version').text('2.0');
         navigator.geolocation.getCurrentPosition(onSuccess, onError); 
         alert("Done!");
     }
@@ -36,6 +36,6 @@ var fn = {
 
 var device = function() {
     document.addEventListener('deviceready', fn.init, false); 
-}
+};
 
 $(fn.init);
