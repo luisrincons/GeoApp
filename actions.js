@@ -49,7 +49,7 @@ var geoloc = {
     //},
     
     onSucess : function(position) {
-                
+            alert("1");
             //Posición del mapa
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             var myOptions = {
