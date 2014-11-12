@@ -1,13 +1,12 @@
 //actions.js
 
-var geoloc = { 
-    
-    //device: function(){
-    //    document.addEventListener('deviceready', fn.init, false); 
-    //},
-    
-    onSucess: function(position) {
-        
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+var fn = {
+    init : function() {
      alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
@@ -15,8 +14,19 @@ var geoloc = {
           'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
           'Heading: '           + position.coords.heading           + '\n' +
           'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');
-        
+          'Timestamp: '         + position.timestamp                + '\n');   
+      //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+    }
+};
+
+var geoloc = { 
+    
+    device: function(){
+        document.addEventListener('deviceready', fn.init, false); 
+    },
+    
+    onSucess: function(position) {
+                
         geoloc.lat = position.coords.latitude;
         geoloc.lon = position.coords.longitude;
         
@@ -55,4 +65,4 @@ var geoloc = {
 
 };
 
-navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError);
+$(fn.init);
