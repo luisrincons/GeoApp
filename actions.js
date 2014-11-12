@@ -9,7 +9,7 @@ var fn = {
     init : function() {
         
         alert("Iniciando...");
-        //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+        navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
         //alert('Latitude: '          + position.coords.latitude          + '\n' +
         //  'Longitude: '         + position.coords.longitude         + '\n' +
         //  'Altitude: '          + position.coords.altitude          + '\n' +
@@ -28,7 +28,7 @@ var geoloc = {
 //        document.addEventListener('deviceready', fn.init, false); 
 //    },
     
-//    onSucess: function(position) {
+    onSucess: function(position) {
                 
 //        geoloc.lat = position.coords.latitude;
 //        geoloc.lon = position.coords.longitude;
@@ -59,12 +59,12 @@ var geoloc = {
 //        };//end-if
         
              
-//    },
+    },
     
-//    onError: function(error) {
+    onError: function(error) {
 //        alert('code: '    + error.code    + '\n' +
 //              'message: ' + error.message + '\n');
-//    }
+    }
 
 };
 
