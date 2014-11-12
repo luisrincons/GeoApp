@@ -48,7 +48,7 @@ var geoloc = {
     //    document.addEventListener('deviceready', fn.init, false); 
     //},
     
-    onSucess: function(position) {
+    onSucess : function(position) {
                 
             //Posición del mapa
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -70,7 +70,7 @@ var geoloc = {
              
     },
     
-    onError: function(error) {
+    onError : function(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
