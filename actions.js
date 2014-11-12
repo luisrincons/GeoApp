@@ -7,8 +7,8 @@
 
 var fn = {
     init : function() {
-        $('#version').text('1.1');
-        //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+        $('#version').text('1.2');
+        navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
         alert("Done!");
     }
 };
