@@ -9,10 +9,8 @@ var fn = {
     init : function() {
         
         navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
-        alert('Latitude: '      + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');   
+        alert('Latitude: '      + geoloc.lat          + '\n' +
+          'Longitude: '         + geoloc.lon         + '\n');   
 
     }
 };
@@ -25,8 +23,8 @@ var geoloc = {
     
     onSucess: function(position) {
                 
-//        geoloc.lat = position.coords.latitude;
-//        geoloc.lon = position.coords.longitude;
+        geoloc.lat = position.coords.latitude;
+        geoloc.lon = position.coords.longitude;
         
 //        if(geoloc.lat != undefined && geoloc.lon != undefined){
 
