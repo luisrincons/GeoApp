@@ -1,14 +1,16 @@
 //actions.js
+var onSuccess = function(position) {
+};
 
-//function onError(error) {
-//    alert('code: '    + error.code    + '\n' +
-//          'message: ' + error.message + '\n');
-//}
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
 
 var fn = {
     init : function() {
-        $('#version').text('1.2');
-        navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+        $('#version').text('1.3');
+        navigator.geolocation.getCurrentPosition(onSuccess, onError); 
         alert("Done!");
     }
 };
