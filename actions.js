@@ -7,7 +7,7 @@
 
 var fn = {
     init : function() {
-        $('#version').text('1.0');
+        $('#version').text('1.1');
         //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
         alert("Done!");
     }
@@ -15,9 +15,9 @@ var fn = {
 
 var geoloc = { 
     
-//    device: function(){
-//        document.addEventListener('deviceready', fn.init, false); 
-//    },
+    //device: function(){
+    //    document.addEventListener('deviceready', fn.init, false); 
+    //},
     
     onSucess: function(position) {
                 
@@ -53,8 +53,8 @@ var geoloc = {
     },
     
     onError: function(error) {
-//        alert('code: '    + error.code    + '\n' +
-//              'message: ' + error.message + '\n');
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
     }
 
 };
