@@ -5,7 +5,7 @@ var onSuccess = function(position) {
 //        if(geoloc.lat != undefined && geoloc.lon != undefined){
 
             //Posición del mapa
-            var latlng = new google.maps.LatLngposition.coords.latitude, position.coords.longitude);
+            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             var myOptions = {
                 zoom: 8,
                 center: latlng,
