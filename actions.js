@@ -38,4 +38,4 @@ var device = function() {
     document.addEventListener('deviceready', fn.init, false); 
 };
 
-$(fn.init);
+$(device);
