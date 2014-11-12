@@ -7,10 +7,9 @@
 
 var fn = {
     init : function() {
-        
-        navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
-        alert('Latitude: ' );   
-
+        $('#version').text('1.0');
+        //navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError); 
+        alert("Done!");
     }
 };
 
